@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="Soh Manyeong">
   <meta name="keywords" content="">
-  <title>An idea about Life Management - Shonsama</title>
+  <title>A Simple Guideline to build your own Blog - Shonsama</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="An idea about Life Management">
+            <span class="h2" id="subtitle" title="A Simple Guideline to build your own Blog">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-18 17:22" pubdate>
-        2020年11月18日 下午
+      <time datetime="2020-11-16 17:22" pubdate>
+        2020年11月16日 下午
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      18 字
+      278 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -224,10 +224,53 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">An idea about Life Management</h1>
+            <h1 style="display: none">A Simple Guideline to build your own Blog</h1>
             
             <div class="markdown-body">
-              <p>This post is a simple review of the book <em>12 Rules For Life</em>, wrriten by <em>Jordan B Peterson</em>.</p>
+              <p>Welcome to My Blog! This is my very first post. In this post, a simple guideline of using Hexo and fluid to build and beatify your own Blog will be provided. If you have any question, please check the <a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo offical document</a> and <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs">Fluid offical document</a> for more detailed information.</p>
+<h2 id="The-Environment"><a href="#The-Environment" class="headerlink" title="The Environment"></a>The Environment</h2><h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><p>Download Git in the offical website: <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git - Downloading Package</a>.</p>
+<h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><p>Download Node.js in the offical website: <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Download | Node.js</a>.</p>
+<h2 id="Init-Hexo-Project"><a href="#Init-Hexo-Project" class="headerlink" title="Init Hexo Project"></a>Init Hexo Project</h2><h3 id="Install-hexo-cli"><a href="#Install-hexo-cli" class="headerlink" title="Install hexo-cli"></a>Install hexo-cli</h3><pre><code class="hljs bash">$ npm install -g hexo-cli</code></pre>
+<h3 id="Init-hexo-project"><a href="#Init-hexo-project" class="headerlink" title="Init hexo project"></a>Init hexo project</h3><pre><code class="hljs bash">$ hexo init blog</code></pre>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;Post Name&quot;</span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><p>Show the website in localhost.</p>
+<pre><code class="hljs bash">$ hexo s</code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Config-deployment"><a href="#Config-deployment" class="headerlink" title="Config deployment"></a>Config deployment</h3><p>Open the file <code>_config.yml</code> in folder <code>/themes</code> and modify the deploy part as follows:</p>
+<pre><code class="hljs bash">deploy:
+    <span class="hljs-built_in">type</span>: git
+    repo: <span class="hljs-string">&#x27;your repository URL&#x27;</span>
+    branch: master</code></pre>
+<h3 id="Save-the-configuration-file"><a href="#Save-the-configuration-file" class="headerlink" title="Save the configuration file"></a>Save the configuration file</h3><pre><code class="hljs bash">$ npm install hexo-deployer-git --save</code></pre>
+<h3 id="Clean-static-files"><a href="#Clean-static-files" class="headerlink" title="Clean static files"></a>Clean static files</h3><pre><code class="hljs bash">$ hexo clean</code></pre>
+
+
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo g</code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo d</code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="Using-Theme-Fluid"><a href="#Using-Theme-Fluid" class="headerlink" title="Using Theme Fluid"></a>Using Theme Fluid</h2><h3 id="Install-Fluid"><a href="#Install-Fluid" class="headerlink" title="Install Fluid"></a>Install Fluid</h3><p>If your Hexo version &gt;= 5.0.0, you can install Fluid via Npm:</p>
+<pre><code class="hljs bash">$ npm install --save hexo-theme-fluid</code></pre>
+<p>Then create <code>_config.fluid.yml</code> in the blog directory and copy the content of <code>_config.yml</code> in <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">Page</a>.</p>
+<h3 id="Set-theme"><a href="#Set-theme" class="headerlink" title="Set theme"></a>Set theme</h3><p>Edit <code>_config.yml</code> in the blog root directory as follows:</p>
+<pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> fluid</code></pre>
+<h3 id="Create-about-page"><a href="#Create-about-page" class="headerlink" title="Create about page"></a>Create about page</h3><p>The about page needs to be created manually:</p>
+<pre><code class="hljs bash">$ hexo new page about</code></pre>
+
+<p>Then edit <code>/source/about/index.md</code> and add <code>layout</code> attribute.<br>The modified example is as follows:</p>
+<pre><code class="hljs yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> <span class="hljs-string">about</span>
+<span class="hljs-attr">date:</span> <span class="hljs-number">2020-02-23 19:20:33</span>
+<span class="hljs-attr">layout:</span> <span class="hljs-string">about</span>
+<span class="hljs-meta">---</span>
+
+<span class="hljs-string">About</span> <span class="hljs-string">content</span></code></pre>
+<h3 id="More-configuration"><a href="#More-configuration" class="headerlink" title="More configuration"></a>More configuration</h3><p>For more information, please visit the <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">Offical document</a>.</p>
 
             </div>
             <hr>
@@ -237,7 +280,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%80%9D%E8%80%83%E5%8A%9B/">思考力</a>
+                      <a class="hover-with-bg" href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/">勉強力</a>
                     
                   </div>
                 
@@ -245,9 +288,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Jordan-B-Peterson/">Jordan B Peterson</a>
+                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%9B%B8%E8%A9%95/">書評</a>
+                      <a class="hover-with-bg" href="/tags/Blog/">Blog</a>
                     
                       <a class="hover-with-bg" href="/tags/EN/">EN</a>
                     
@@ -265,12 +308,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2020/11/18/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/">
-                        <span class="hidden-mobile">A Simple Guideline to build your own Blog</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
