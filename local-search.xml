@@ -8,7 +8,7 @@
     <link href="/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/"/>
     <url>/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/</url>
     
-    <content type="html"><![CDATA[<h1 id="1-1-Bits-and-Their-Storage"><a href="#1-1-Bits-and-Their-Storage" class="headerlink" title="1.1 Bits and Their Storage"></a>1.1 Bits and Their Storage</h1><p><strong>Bits</strong>: 0s and 1s</p><h2 id="Boolean-Operation"><a href="#Boolean-Operation" class="headerlink" title="Boolean Operation"></a>Boolean Operation</h2><p>There are there kind of boolean operations.</p><ul><li>AND: A AND B is True, A is True and B is True</li><li>OR: A OR B is True, At least one of A and B is True</li><li>XOR: A XOR B is True, either A or B but not both</li></ul><h2 id="Gates-and-Flip-Flop"><a href="#Gates-and-Flip-Flop" class="headerlink" title="Gates and Flip-Flop"></a>Gates and Flip-Flop</h2><h3 id="Gates"><a href="#Gates" class="headerlink" title="Gates:"></a>Gates:</h3><ul><li>AND:</li><li>OR:</li><li>XOR:</li><li>NOT:</li></ul><h3 id="Flip-flop"><a href="#Flip-flop" class="headerlink" title="Flip-flop"></a>Flip-flop</h3><h2 id="Hexadecimal-Notation-十六进制记数法"><a href="#Hexadecimal-Notation-十六进制记数法" class="headerlink" title="Hexadecimal Notation 十六进制记数法"></a>Hexadecimal Notation 十六进制记数法</h2><p>Stream：A long string of bits (0s and 1s)<br>Hard to read and comprehend. So we need a new shorthand notation to simplify the representation of the string, which is <strong><em>Hexadecimal Notation</em></strong>.</p><ul><li>Takes advantage of the fact that bit patterns within a machine tend to have lengths in multiples of four.</li><li>Represent Table <ul><li>TODO:</li></ul></li></ul><h1 id="1-2-Main-Memory"><a href="#1-2-Main-Memory" class="headerlink" title="1.2 Main Memory"></a>1.2 Main Memory</h1><p>A computer store a large number collection of <strong><em>circuits</em></strong><br>(such as flip-flops), each storing a <strong>single bit</strong> .This bit reservoir is known<br>as the machine’s <strong><em>main memory</em></strong>.</p><h2 id="Memory-Organization"><a href="#Memory-Organization" class="headerlink" title="Memory Organization"></a>Memory Organization</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-1-Bits-and-Their-Storage"><a href="#1-1-Bits-and-Their-Storage" class="headerlink" title="1.1 Bits and Their Storage"></a>1.1 Bits and Their Storage</h1><p><strong>Bits</strong>: 0s and 1s</p><h2 id="Boolean-Operation"><a href="#Boolean-Operation" class="headerlink" title="Boolean Operation"></a>Boolean Operation</h2><p>There are there kind of boolean operations.</p><ul><li>AND: A AND B is True, A is True and B is True</li><li>OR: A OR B is True, At least one of A and B is True</li><li>XOR: A XOR B is True, either A or B but not both</li></ul><h2 id="Gates-and-Flip-Flop"><a href="#Gates-and-Flip-Flop" class="headerlink" title="Gates and Flip-Flop"></a>Gates and Flip-Flop</h2><h3 id="Gates"><a href="#Gates" class="headerlink" title="Gates:"></a>Gates:</h3><ul><li>AND:</li><li>OR:</li><li>XOR:</li><li>NOT:</li></ul><h3 id="Flip-flop"><a href="#Flip-flop" class="headerlink" title="Flip-flop"></a>Flip-flop</h3><h2 id="Hexadecimal-Notation-十六进制记数法"><a href="#Hexadecimal-Notation-十六进制记数法" class="headerlink" title="Hexadecimal Notation 十六进制记数法"></a>Hexadecimal Notation 十六进制记数法</h2><p>Stream：A long string of bits (0s and 1s)<br>Hard to read and comprehend. So we need a new shorthand notation to simplify the representation of the string, which is <strong><em>Hexadecimal Notation</em></strong>.</p><ul><li>Takes advantage of the fact that bit patterns within a machine tend to have lengths in multiples of four.</li><li>Represent Table <ul><li>TODO:</li></ul></li></ul><h1 id="1-2-Main-Memory"><a href="#1-2-Main-Memory" class="headerlink" title="1.2 Main Memory"></a>1.2 Main Memory</h1><p>A computer store a large number collection of <strong><em>circuits</em></strong>(such as flip-flops), each storing a <strong>single bit</strong> .This bit reservoir is known as the machine’s <strong><em>main memory</em></strong>.</p><h2 id="Memory-Organization"><a href="#Memory-Organization" class="headerlink" title="Memory Organization"></a>Memory Organization</h2>]]></content>
     
     
     <categories>
@@ -20,11 +20,11 @@
     
     <tags>
       
-      <tag>EN</tag>
-      
       <tag>CS</tag>
       
       <tag>一般入试</tag>
+      
+      <tag>EN</tag>
       
       <tag>ZN</tag>
       
@@ -51,11 +51,11 @@
     
     <tags>
       
+      <tag>EN</tag>
+      
       <tag>Hexo</tag>
       
       <tag>Blog</tag>
-      
-      <tag>EN</tag>
       
     </tags>
     
