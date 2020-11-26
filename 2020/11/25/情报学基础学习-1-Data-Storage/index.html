@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      164 字
+      595 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      11
        分钟
     </span>
   
@@ -228,7 +228,7 @@
             
             <div class="markdown-body">
               <h1 id="1-1-Bits-and-Their-Storage"><a href="#1-1-Bits-and-Their-Storage" class="headerlink" title="1.1 Bits and Their Storage"></a>1.1 Bits and Their Storage</h1><p><strong>Bits</strong>: 0s and 1s</p>
-<h2 id="Boolean-Operation"><a href="#Boolean-Operation" class="headerlink" title="Boolean Operation"></a>Boolean Operation</h2><p>There are there kind of boolean operations.</p>
+<h2 id="Boolean-Operation"><a href="#Boolean-Operation" class="headerlink" title="Boolean Operation"></a>Boolean Operation</h2><p>There are there kinds of boolean operations.</p>
 <ul>
 <li>AND: A AND B is True, A is True and B is True</li>
 <li>OR: A OR B is True, At least one of A and B is True</li>
@@ -240,7 +240,8 @@
 <li>XOR:</li>
 <li>NOT:</li>
 </ul>
-<h3 id="Flip-flop"><a href="#Flip-flop" class="headerlink" title="Flip-flop"></a>Flip-flop</h3><h2 id="Hexadecimal-Notation-十六进制记数法"><a href="#Hexadecimal-Notation-十六进制记数法" class="headerlink" title="Hexadecimal Notation 十六进制记数法"></a>Hexadecimal Notation 十六进制记数法</h2><p>Stream：A long string of bits (0s and 1s)<br>Hard to read and comprehend. So we need a new shorthand notation to simplify the representation of the string, which is <strong><em>Hexadecimal Notation</em></strong>.</p>
+<h3 id="Flip-flop"><a href="#Flip-flop" class="headerlink" title="Flip-flop"></a>Flip-flop</h3><p>A device to store a bit, constructed of gates.</p>
+<h2 id="Hexadecimal-Notation-十六进制记数法"><a href="#Hexadecimal-Notation-十六进制记数法" class="headerlink" title="Hexadecimal Notation 十六进制记数法"></a>Hexadecimal Notation 十六进制记数法</h2><p>Stream：A long string of bits (0s and 1s)<br>Hard to read and comprehend. So we need a new shorthand notation to simplify the representation of the string, which is <strong><em>Hexadecimal Notation</em></strong>.</p>
 <ul>
 <li>Takes advantage of the fact that bit patterns within a machine tend to have lengths in multiples of four.</li>
 <li>Represent Table <ul>
@@ -249,7 +250,39 @@
 </li>
 </ul>
 <h1 id="1-2-Main-Memory"><a href="#1-2-Main-Memory" class="headerlink" title="1.2 Main Memory"></a>1.2 Main Memory</h1><p>A computer store a large number collection of <strong><em>circuits</em></strong>(such as flip-flops), each storing a <strong>single bit</strong> .This bit reservoir is known as the machine’s <strong><em>main memory</em></strong>.</p>
-<h2 id="Memory-Organization"><a href="#Memory-Organization" class="headerlink" title="Memory Organization"></a>Memory Organization</h2>
+<h2 id="Memory-Organization"><a href="#Memory-Organization" class="headerlink" title="Memory Organization"></a>Memory Organization</h2><h3 id="Cells"><a href="#Cells" class="headerlink" title="Cells"></a>Cells</h3><p>Main memory is organized in manageable units called cells. A typical cell size being <strong>eight bits</strong> which is one <strong>byte</strong>.</p>
+<ul>
+<li><strong>high-order end</strong>, or the most significant bit is the <strong>left</strong> end of the row (which is a memory cell).<br>  如果这个cell被表示为数字，则这个MSB代表了这个cell最重要的内容，数字的正负，1代表正，0代表负。</li>
+<li><strong>low-order end</strong>,  or the least significant bit is the <strong>right</strong> end of the row (which is a memory cell).<br>  如果这个cell被表示为数字，则这个LSB代表了这个cell最不重要的内容，指示数字很小的变化。</li>
+</ul>
+<h3 id="Address"><a href="#Address" class="headerlink" title="Address"></a>Address</h3><p>A unique “name” assign to a cell. The Address system not only gives us a way of uniquely <strong>identifying</strong> each cell but also associates <strong>an order</strong> to the cells. Which means there are “the next cell” and “the previous cell”.</p>
+<ul>
+<li>which means you can store bit patterns that may be longer than the length of a single cell.<br>  For example, we can still store a string of 16 bits merely by using two consecutive memory cells.</li>
+<li>Read operation: get data from the memory by asking for the content of the address.</li>
+<li>Write operation: record information in the memory by requesting that a certain bit pattern be placed in the cell at a particular address.</li>
+</ul>
+<h3 id="RAM-Random-Access-Memory"><a href="#RAM-Random-Access-Memory" class="headerlink" title="RAM (Random Access Memory)"></a>RAM (Random Access Memory)</h3><p>The main memory has the ability to access cells in any order.<br>Constructed using <strong>not</strong> flip-flop, but more complex technologies that provide greater miniaturization and faster response time. </p>
+<ul>
+<li><strong>DRAM</strong>: dynamic memory.</li>
+<li><strong>SDRAM</strong>: synchronous DRAM, decrease the time needed to retrieve the contents from its memory cells.</li>
+</ul>
+<h2 id="Measuring-Memory-Capacity"><a href="#Measuring-Memory-Capacity" class="headerlink" title="Measuring Memory Capacity"></a>Measuring Memory Capacity</h2><p>进位1024: bit, KB, MB, GB, TB.</p>
+<h1 id="1-3-Mass-Memory"><a href="#1-3-Mass-Memory" class="headerlink" title="1.3 Mass Memory"></a>1.3 Mass Memory</h1><p>Additional memory devices including magnetic disks, CDs, DVDs, magnetic tapes, flash drives, and solid-state disks(SSD).</p>
+<ul>
+<li><strong>Pros</strong>: less volatility, large storage capacities, low cost, and in many cases, the ability to remove the storage medium from the machine for archival purposes.</li>
+<li><strong>Cons</strong>: require mechanical motion and therefore require significantly more time to store and retrieve data than a machine’s main memory. Storage systems with moving parts are more prone to mechanical failures than solid state systems.</li>
+</ul>
+<h2 id="Magnetic-Systems"><a href="#Magnetic-Systems" class="headerlink" title="Magnetic Systems"></a>Magnetic Systems</h2><p>TODO: </p>
+<h2 id="Optical-Systems"><a href="#Optical-Systems" class="headerlink" title="Optical Systems"></a>Optical Systems</h2><p>TODO:</p>
+<h2 id="Flash-Drives"><a href="#Flash-Drives" class="headerlink" title="Flash Drives"></a>Flash Drives</h2><p>TODO: </p>
+<h1 id="1-4-Representing-Information-as-Bit-Patterns"><a href="#1-4-Representing-Information-as-Bit-Patterns" class="headerlink" title="1.4 Representing Information as Bit Patterns"></a>1.4 Representing Information as Bit Patterns</h1><h2 id="Representing-Text"><a href="#Representing-Text" class="headerlink" title="Representing Text"></a>Representing Text</h2><p>TODO:</p>
+<h2 id="Representing-Numeric-Values"><a href="#Representing-Numeric-Values" class="headerlink" title="Representing Numeric Values"></a>Representing Numeric Values</h2><p>TODO:</p>
+<h2 id="Representing-Images"><a href="#Representing-Images" class="headerlink" title="Representing Images"></a>Representing Images</h2><p>TODO:</p>
+<h2 id="Representing-Sound"><a href="#Representing-Sound" class="headerlink" title="Representing Sound"></a>Representing Sound</h2><p>TODO:</p>
+<h1 id="1-5-The-Binary-System"><a href="#1-5-The-Binary-System" class="headerlink" title="1.5 The Binary System"></a>1.5 The Binary System</h1><h2 id="Binary-Notation"><a href="#Binary-Notation" class="headerlink" title="Binary Notation"></a>Binary Notation</h2><p>TODO:</p>
+<h2 id="Binary-Addition"><a href="#Binary-Addition" class="headerlink" title="Binary Addition"></a>Binary Addition</h2><p>TODO:</p>
+<h2 id="Fractions-in-Binary"><a href="#Fractions-in-Binary" class="headerlink" title="Fractions in Binary"></a>Fractions in Binary</h2><p>TODO:</p>
+
             </div>
             <hr>
             <div>
@@ -266,11 +299,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
+                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
+                    
                       <a class="hover-with-bg" href="/tags/CS/">CS</a>
                     
                       <a class="hover-with-bg" href="/tags/%E4%B8%80%E8%88%AC%E5%85%A5%E8%AF%95/">一般入试</a>
-                    
-                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
                     
                       <a class="hover-with-bg" href="/tags/ZN/">ZN</a>
                     
