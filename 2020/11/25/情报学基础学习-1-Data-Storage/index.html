@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      596 字
+      1k 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      16
        分钟
     </span>
   
@@ -266,7 +266,32 @@
 <li><strong>Cons</strong>: require mechanical motion and therefore require significantly more time to store and retrieve data than a machine’s main memory. Storage systems with moving parts are more prone to mechanical failures than solid state systems.</li>
 </ul>
 <h2 id="Magnetic-Systems"><a href="#Magnetic-Systems" class="headerlink" title="Magnetic Systems"></a>Magnetic Systems</h2><p><strong>Examples</strong>: magnetic disk, hard disk drive (HDD)</p>
-<h2 id="Optical-Systems"><a href="#Optical-Systems" class="headerlink" title="Optical Systems"></a>Optical Systems</h2><p>TODO</p>
+<h3 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h3><p><img src="/img/index/CS-overview/disk.jpg" srcset="/img/loading.gif" alt="Magnetic Disk"></p>
+<ul>
+<li>磁道 (track): 磁盘内部由无数圆圈构成，,这一圈圈圆圈被称为<strong>磁道</strong>。</li>
+<li>柱面 (cylinder): 一个磁盘存储系统由若干个磁盘构成，安排在同一根轴上，在这种情况下所有读写头一起移动，每当读写头重定位时，都可以访问一组新的磁道，这组<strong>磁道</strong>被称为<strong>柱面</strong>。<br>  <strong>注</strong>: 在磁盘存储过程当中要注意尽量减少读写头重定位的次数。</li>
+<li>扇区 (sector): 一个磁道包含很多数据，所以我们把一个磁道划分为若干个<strong>扇区</strong>，因为每个磁道包含的扇区都相同，所以最外层磁道的扇区的密度最小。<br>  <strong>注</strong>: 在大容量磁盘系统中，最外层磁道的扇区多于内侧磁道，这种技术被称为<strong>区位记录</strong>，相邻的磁道被统称为区，一个区的扇区数量相同。</li>
+<li>容积 (Capacity): depends on <ul>
+<li>the number of platters and </li>
+<li>the density in which the tracks and sectors are placed.</li>
+</ul>
+</li>
+<li>性能 (Performance): <ul>
+<li><strong>Seek time</strong>：读写头从一个磁道移动到另一个磁道的时间。</li>
+<li><strong>Rotation delay</strong> or <strong>Latency time</strong>：读写头到达磁道之后，等到磁盘旋转到需要到达的扇区的时间。</li>
+<li><strong>Access time</strong>：seek time 和 latency time 之和。</li>
+<li><strong>Transfer rate</strong>：在磁盘上读出或写入数据的速率。</li>
+</ul>
+  <strong>注</strong>：磁盘旋转 (rotate) 的速度影响磁盘存储时间和传输速率。<ul>
+<li>为了支持高速转动，磁盘系统的读写头并不与磁盘接触，而是悬浮在磁盘上。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Optical-Systems"><a href="#Optical-Systems" class="headerlink" title="Optical Systems"></a>Optical Systems</h2><p><strong>Examples</strong>:  compact disk (CD)<br><strong>Construction:</strong><br><img src="/img/index/CS-overview/CD.jpg" srcset="/img/loading.gif" alt="CD"></p>
+<ul>
+<li>为了使CD储存能力达到最大，采取统一的线性密度存储在整个螺旋形磁道 (spiraled track)上</li>
+</ul>
+<p><strong>Capacity:</strong> depends on the number of platters and the density in which the tracks and sectors are placed.<br><strong>Performance:</strong> evaluated by 4 factors,</p>
 <h2 id="Flash-Drives"><a href="#Flash-Drives" class="headerlink" title="Flash Drives"></a>Flash Drives</h2><p>TODO</p>
 <h1 id="1-4-Representing-Information-as-Bit-Patterns"><a href="#1-4-Representing-Information-as-Bit-Patterns" class="headerlink" title="1.4 Representing Information as Bit Patterns"></a>1.4 Representing Information as Bit Patterns</h1><h2 id="Representing-Text"><a href="#Representing-Text" class="headerlink" title="Representing Text"></a>Representing Text</h2><p>TODO:</p>
 <h2 id="Representing-Numeric-Values"><a href="#Representing-Numeric-Values" class="headerlink" title="Representing Numeric Values"></a>Representing Numeric Values</h2><p>TODO:</p>
@@ -292,11 +317,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
-                    
                       <a class="hover-with-bg" href="/tags/CS/">CS</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E4%B8%80%E8%88%AC%E5%85%A5%E8%AF%95/">一般入试</a>
+                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
                     
                       <a class="hover-with-bg" href="/tags/ZN/">ZN</a>
                     
@@ -310,6 +333,12 @@
                 <div class="post-prevnext row">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/01/14/TOFEL-Speaking/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">TOFEL Speaking</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
