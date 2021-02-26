@@ -1,542 +1,742 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
-
-
-
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
-  <link rel="icon" type="image/png" href="/img/avatar.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="Soh Manyeong">
-  <meta name="keywords" content="">
-  <title>Shonsama</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Shonsama">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Shonsama">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Soh Manyeong">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
 
 
-<body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Shonsama's scrapbox</strong>&nbsp;</a>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+  <title>Shonsama</title>
+  
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/bg/home.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="ブログへようこそ!">
-              
-            </span>
+  <div class="site-meta">
 
-            
-          </div>
-
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/02/07/TOFEL-Writing/" target="_self">
-          <img src="/img/bg/default.jpg" srcset="/img/loading.gif" alt="TOFEL-Writing">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/07/TOFEL-Writing/">TOFEL-Writing</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/07/TOFEL-Writing/">
-          
-          
-            
-          
-          Task 1 - Integrated writing　　The lecture and the reading passage discuss (). The lecturer put forwards 3 points and effectively contradicts the opininon of the reading.
-　　First of all, the reading say
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-07 13:59" pubdate>
-              2021-02-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/">勉強力</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/TOFEL/">TOFEL</a>
-            
-              <a href="/tags/EN/">EN</a>
-            
-          </div>
-        
-      </div>
-    </article>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Shonsama</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/01/14/TOFEL-Speaking/" target="_self">
-          <img src="/img/bg/default.jpg" srcset="/img/loading.gif" alt="TOFEL Speaking">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/14/TOFEL-Speaking/">TOFEL Speaking</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/14/TOFEL-Speaking/">
-          
-          
-            
-          
-          Task 1 - Independent SpeakingIn this part, you need to choose and disscuss your point of view about a statement. And the answer guideline is as following:
-Set the standpointChoose agree or disagreeSta
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-14 00:51" pubdate>
-              2021-01-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/">勉強力</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/TOFEL/">TOFEL</a>
-            
-              <a href="/tags/EN/">EN</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/" target="_self">
-          <img src="/img/index/CS.png" srcset="/img/loading.gif" alt="情报学基础学习-1.Data Storage">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/">情报学基础学习-1.Data Storage</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/">
-          
-          
-            
-          
-          1.1 Bits and Their StorageBits: 0s and 1s
-Boolean OperationThere are 3 kinds of boolean operations.
-
-AND: A AND B is True, A is True and B is True
-OR: A OR B is True, At least one of A and B is True
-X
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-25 15:57" pubdate>
-              2020-11-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/">勉強力</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/CS/">CS</a>
-            
-              <a href="/tags/ZN/">ZN</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/" target="_self">
-          <img src="/img/index/Hexo.png" srcset="/img/loading.gif" alt="A Simple Guideline to build your own Blog">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/">A Simple Guideline to build your own Blog</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/">
-          
-          
-            
-          
-          Welcome to My Blog! This is my very first post. In this post, a simple guideline of using Hexo and fluid to build and beatify your own Blog will be provided. If you have any question, please check the
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-16 17:22" pubdate>
-              2020-11-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/">勉強力</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/Hexo/">Hexo</a>
-            
-              <a href="/tags/Blog/">Blog</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-
-    
-      <a id="scroll-top-button" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
     </div>
   </div>
 </div>
-    
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
-  </main>
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <i class="iconfont icon-love"></i> Powered by <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
-  
-
-  
-
-  
-</footer>
-
-<!-- SCRIPTS -->
-
-  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
-    NProgress.start()
-    document.addEventListener('DOMContentLoaded', function() {
-      window.NProgress && window.NProgress.inc();
-    })
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
 
 
-<script  src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
+          <div class="content index posts-expand">
+            
       
-      typing(title)
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/07/TOFEL-Writing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Soh Manyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shonsama">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/07/TOFEL-Writing/" class="post-title-link" itemprop="url">TOFEL-Writing</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-07 13:59:00" itemprop="dateCreated datePublished" datetime="2021-02-07T13:59:00+08:00">2021-02-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-08 17:24:45" itemprop="dateModified" datetime="2021-02-08T17:24:45+08:00">2021-02-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/" itemprop="url" rel="index"><span itemprop="name">勉強力</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-    })(window, document);
-  </script>
+          <h1 id="Task-1-Integrated-writing"><a href="#Task-1-Integrated-writing" class="headerlink" title="Task 1 - Integrated writing"></a>Task 1 - Integrated writing</h1><p>　　The lecture and the reading passage discuss (). The lecturer put forwards 3 points and effectively contradicts the opininon of the reading.</p>
+<p>　　First of all, the reading says that ( ). In contrast, the lecture claims that ( ). By this way, the lecture contradicts the first opinion of the reading.</p>
+<p>　　Second, the reading claims that ( ), while according to the lecture, this is not the case. The lecturer says that ( ). By casting doubt on an important peice of evidence of the reading, the lecture contradicts the second claim of the reading.</p>
+<p>　　Finally, the reading states that ( ), while the lecture claims that ( ). Thus the lecture refutes the last claim of the reading.</p>
+<h1 id="Task-2-Independent-writing"><a href="#Task-2-Independent-writing" class="headerlink" title="Task 2 - Independent writing"></a>Task 2 - Independent writing</h1><p>Some people argue as if it is a general truth that a________.But to be frank, I cannot agree with them. There are numerous reasons why I hold no confidence on them, and I would explore only a few primary ones here. </p>
+<p>The main problem with this argument is that it is ignorant o the basic fact that（解释本段中心）</p>
+<p>An other reason why I disagree with the above statement is that I believe that_______</p>
+<p>What is more, some students are interested in_______</p>
+<p>In a word, <strong>__</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/14/TOFEL-Speaking/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Soh Manyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shonsama">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/14/TOFEL-Speaking/" class="post-title-link" itemprop="url">TOFEL Speaking</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-14 00:51:43" itemprop="dateCreated datePublished" datetime="2021-01-14T00:51:43+08:00">2021-01-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-08 18:04:09" itemprop="dateModified" datetime="2021-02-08T18:04:09+08:00">2021-02-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/" itemprop="url" rel="index"><span itemprop="name">勉強力</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Task-1-Independent-Speaking"><a href="#Task-1-Independent-Speaking" class="headerlink" title="Task 1 - Independent Speaking"></a>Task 1 - Independent Speaking</h1><p>In this part, you need to choose and disscuss your point of view about a statement. And the answer guideline is as following:</p>
+<h2 id="Set-the-standpoint"><a href="#Set-the-standpoint" class="headerlink" title="Set the standpoint"></a>Set the standpoint</h2><p>Choose agree or disagree<br>Start with: “It seems to me that <em>the statement</em> is a better choice.”  </p>
+<h2 id="Discuss-about-the-standpoint"><a href="#Discuss-about-the-standpoint" class="headerlink" title="Discuss about the standpoint"></a>Discuss about the standpoint</h2><h3 id="Using-The-Aristoteles-Priniple"><a href="#Using-The-Aristoteles-Priniple" class="headerlink" title="Using The Aristoteles Priniple:"></a>Using <strong>The Aristoteles Priniple</strong>:</h3><p>Big Pre-condition + Small Pre-condition + Conclusion</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><p>Statement:<br>living in a big city is a better choice.</p>
+<ol>
+<li>Big Pre-condition:<br>People like to make friends with people who share same hobbies.</li>
+<li>Small Pre-condition:<br>In big city, it is much easier to find people share with same hobbies with you than in countryside.</li>
+<li>Conclusion:<br>living in a big city could help you make more friends.</li>
+</ol>
+<h2 id="Set-the-detail-with-examples"><a href="#Set-the-detail-with-examples" class="headerlink" title="Set the detail with examples"></a>Set the detail with examples</h2><h3 id="Make-the-announcement-concreted"><a href="#Make-the-announcement-concreted" class="headerlink" title="Make the announcement concreted:"></a>Make the announcement concreted:</h3><p>One of my hobbies is playing guitar, and In Shanghai there are lots of clubs about it. I join the club and find a lot of people share the hobby with me, we play guitar to each other and even in the public. I made a lot of friends there and have a lot of good time. </p>
+<h1 id="Task-2-Proposal-Evaluation"><a href="#Task-2-Proposal-Evaluation" class="headerlink" title="Task 2 - Proposal Evaluation"></a>Task 2 - Proposal Evaluation</h1><p>In this part, you will be given a reading passage about a proposal and a listening conversation about the evaluation of the proposal.</p>
+<h2 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h2><ol>
+<li><p>提案的内容 （提案提出了什么新规则或新改变？）<br>参考句式：The reading passage proposes a change to campus policy. In particular, +提案内容。</p>
+</li>
+<li><p>主人公对于提案的观点（支持还是反对？）<br>参考句式：The man/woman in the conversation agrees/disagrees with this idea.</p>
+</li>
+<li><p>主人公该观点的两个原因<br>参考句式：To start, he/she says that … + 第一个理由Secondly, he/she explains that … +第二个理由</p>
+</li>
+<li><p>总结<br>参考句式：As you can see, the man/woman in the conversation agrees/disagrees with this proposal.</p>
+</li>
+</ol>
+<h1 id="Task-3-Academic-subjects-Reading-Listening"><a href="#Task-3-Academic-subjects-Reading-Listening" class="headerlink" title="Task 3 - Academic subjects(Reading + Listening):"></a>Task 3 - Academic subjects(Reading + Listening):</h1><h2 id="Reading"><a href="#Reading" class="headerlink" title="Reading:"></a>Reading:</h2><h3 id="Sample-study"><a href="#Sample-study" class="headerlink" title="Sample study"></a>Sample study</h3><p>Outsider Art<br>Outsider Art is a term used to describe art that is made by people who choose to live and work outside society. The artists who produce this kind of art-Outsider Artists- work in isolation from other artists and have little or no formal artistic training. Because they do not learn conventional artistic techniques from teachers or other artists, outsider artists must invent their own ways of doing things. As a result of the unconventional methods that outsider artists often use, their work can look strange and not at all like traditional art to the observer.</p>
+<h2 id="Listening"><a href="#Listening" class="headerlink" title="Listening"></a>Listening</h2><p>听两短或一长,Points的来源：<br>A. 经典实验 B. 真实的例子 （自己、朋友、社会）C. 教授临时虚构的例子 D. 动植物的在自然界中的生存和活动规律</p>
+<h3 id="Template-1"><a href="#Template-1" class="headerlink" title="Template"></a>Template</h3><p>T: The professor uses one/two example(s) to illustrate… (technical term) which means/meaning that… (definition).<br>P: The first example is (about)…<br>The second example is (about) …<br>C: So, that’s it. (optional)</p>
+<p>In the lecture the professor uses one/two examples to explain this theory.The first example is__________，The second example is________，</p>
+<h3 id="Sample-Answer"><a href="#Sample-Answer" class="headerlink" title="Sample Answer"></a>Sample Answer</h3><p><strong><strong><strong><strong><strong><strong><strong><strong><strong>____</strong></strong></strong></strong></strong></strong></strong></strong></strong> outsider art, <strong>____</strong> art that is made by those who choose to live and work outside society.<br><strong><strong><strong>____</strong></strong></strong> H.D. was called an outside artist <strong>____</strong> he lived and painted tons of pictures alone in a Chicago apartment. <strong>__</strong> he didn’t receive any formal art education, no one ever saw his works. <strong><strong>___, his works are pretty unique. <strong><strong>__</strong></strong>, Darger had a difficulty in painting human figures, _</strong></strong> he solved it by pasting children’s pictures cutting out from newspapers and magazines. <strong><strong>__</strong></strong>, his work lookz more crowded with details and is way longer than others’ paintings, about 9 feet long.</p>
+<h1 id="Task-4-Academic-issues-Only-listening"><a href="#Task-4-Academic-issues-Only-listening" class="headerlink" title="Task 4 - Academic issues (Only listening):"></a>Task 4 - Academic issues (Only listening):</h1><h2 id="Template-2"><a href="#Template-2" class="headerlink" title="Template"></a>Template</h2><p>T: In the lecture, the professor talks about two… of …<br>P: The first one is that…<br>Another one is that…</p>
+<p>The professor also mentions / says that…（Also, In addition, Additionally）C: So, these are the two … of… presented by the professor. (optional).</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Soh Manyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shonsama">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/" class="post-title-link" itemprop="url">情报学基础学习-1.Data Storage</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-25 15:57:31" itemprop="dateCreated datePublished" datetime="2020-11-25T15:57:31+08:00">2020-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-16 11:43:30" itemprop="dateModified" datetime="2020-12-16T11:43:30+08:00">2020-12-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/" itemprop="url" rel="index"><span itemprop="name">勉強力</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-1-Bits-and-Their-Storage"><a href="#1-1-Bits-and-Their-Storage" class="headerlink" title="1.1 Bits and Their Storage"></a>1.1 Bits and Their Storage</h1><p><strong>Bits</strong>: 0s and 1s</p>
+<h2 id="Boolean-Operation"><a href="#Boolean-Operation" class="headerlink" title="Boolean Operation"></a>Boolean Operation</h2><p>There are 3 kinds of boolean operations.</p>
+<ul>
+<li>AND: A AND B is True, A is True and B is True</li>
+<li>OR: A OR B is True, At least one of A and B is True</li>
+<li>XOR: A XOR B is True, either A or B but not both</li>
+</ul>
+<h2 id="Gates-and-Flip-Flop"><a href="#Gates-and-Flip-Flop" class="headerlink" title="Gates and Flip-Flop"></a>Gates and Flip-Flop</h2><h3 id="Gates"><a href="#Gates" class="headerlink" title="Gates:"></a>Gates:</h3><p><img src="/img/index/CS-overview/flip-flop.jpg" alt="Gates"></p>
+<h3 id="Flip-flop"><a href="#Flip-flop" class="headerlink" title="Flip-flop"></a>Flip-flop</h3><p>A device to store a bit, constructed of gates.</p>
+<h2 id="Hexadecimal-Notation-十六进制记数法"><a href="#Hexadecimal-Notation-十六进制记数法" class="headerlink" title="Hexadecimal Notation 十六进制记数法"></a>Hexadecimal Notation 十六进制记数法</h2><p>Stream：A long string of bits (0s and 1s)<br>Hard to read and comprehend. So we need a new shorthand notation to simplify the representation of the string, which is <strong><em>Hexadecimal Notation</em></strong>.</p>
+<ul>
+<li>Takes advantage of the fact that bit patterns within a machine tend to have lengths in multiples of four.</li>
+<li>Represent Table </li>
+</ul>
+<p><img src="/img/index/CS-overview/Hexadecimal.jpg" alt="Hexadecimal"></p>
+<h1 id="1-2-Main-Memory"><a href="#1-2-Main-Memory" class="headerlink" title="1.2 Main Memory"></a>1.2 Main Memory</h1><p>A computer store a large number collection of <strong><em>circuits</em></strong>(such as flip-flops), each storing a <strong>single bit</strong> .This bit reservoir is known as the machine’s <strong><em>main memory</em></strong>.</p>
+<h2 id="Memory-Organization"><a href="#Memory-Organization" class="headerlink" title="Memory Organization"></a>Memory Organization</h2><h3 id="Cells"><a href="#Cells" class="headerlink" title="Cells"></a>Cells</h3><p>Main memory is organized in manageable units called cells. A typical cell size being <strong>eight bits</strong> which is one <strong>byte</strong>.</p>
+<ul>
+<li><strong>high-order end</strong>, or the most significant bit is the <strong>left</strong> end of the row (which is a memory cell).<br>  如果这个cell被表示为数字，则这个MSB代表了这个cell最重要的内容，数字的正负，1代表正，0代表负。</li>
+<li><strong>low-order end</strong>,  or the least significant bit is the <strong>right</strong> end of the row (which is a memory cell).<br>  如果这个cell被表示为数字，则这个LSB代表了这个cell最不重要的内容，指示数字很小的变化。</li>
+</ul>
+<h3 id="Address"><a href="#Address" class="headerlink" title="Address"></a>Address</h3><p>A unique “name” assign to a cell. The Address system not only gives us a way of uniquely <strong>identifying</strong> each cell but also associates <strong>an order</strong> to the cells. Which means there are “the next cell” and “the previous cell”.</p>
+<ul>
+<li>which means you can store bit patterns that may be longer than the length of a single cell.<br>  For example, we can still store a string of 16 bits merely by using two consecutive memory cells.</li>
+<li>Read operation: get data from the memory by asking for the content of the address.</li>
+<li>Write operation: record information in the memory by requesting that a certain bit pattern be placed in the cell at a particular address.</li>
+</ul>
+<h3 id="RAM-Random-Access-Memory"><a href="#RAM-Random-Access-Memory" class="headerlink" title="RAM (Random Access Memory)"></a>RAM (Random Access Memory)</h3><p>The main memory has the ability to access cells in any order.<br>Constructed using <strong>not</strong> flip-flop, but more complex technologies that provide greater miniaturization and faster response time. </p>
+<ul>
+<li><strong>DRAM</strong>: dynamic memory.</li>
+<li><strong>SDRAM</strong>: synchronous DRAM, decrease the time needed to retrieve the contents from its memory cells.</li>
+</ul>
+<h2 id="Measuring-Memory-Capacity"><a href="#Measuring-Memory-Capacity" class="headerlink" title="Measuring Memory Capacity"></a>Measuring Memory Capacity</h2><p>进位1024: bit, KB, MB, GB, TB.</p>
+<h1 id="1-3-Mass-Memory"><a href="#1-3-Mass-Memory" class="headerlink" title="1.3 Mass Memory"></a>1.3 Mass Memory</h1><p>Additional memory devices including magnetic disks, CDs, DVDs, magnetic tapes, flash drives, and solid-state disks(SSD).</p>
+<ul>
+<li><strong>Pros</strong>: less volatility, large storage capacities, low cost, and in many cases, the ability to remove the storage medium from the machine for archival purposes.</li>
+<li><strong>Cons</strong>: require mechanical motion and therefore require significantly more time to store and retrieve data than a machine’s main memory. Storage systems with moving parts are more prone to mechanical failures than solid state systems.</li>
+</ul>
+<h2 id="Magnetic-Systems"><a href="#Magnetic-Systems" class="headerlink" title="Magnetic Systems"></a>Magnetic Systems</h2><p><strong>Examples</strong>: magnetic disk, hard disk drive (HDD)</p>
+<h3 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h3><p><img src="/img/index/CS-overview/disk.jpg" alt="Magnetic Disk"></p>
+<ul>
+<li>磁道 (track): 磁盘内部由无数圆圈构成，,这一圈圈圆圈被称为<strong>磁道</strong>。</li>
+<li>柱面 (cylinder): 一个磁盘存储系统由若干个磁盘构成，安排在同一根轴上，在这种情况下所有读写头一起移动，每当读写头重定位时，都可以访问一组新的磁道，这组<strong>磁道</strong>被称为<strong>柱面</strong>。<br>  <strong>注</strong>: 在磁盘存储过程当中要注意尽量减少读写头重定位的次数。</li>
+<li>扇区 (sector): 一个磁道包含很多数据，所以我们把一个磁道划分为若干个<strong>扇区</strong>，因为每个磁道包含的扇区都相同，所以最外层磁道的扇区的密度最小。<br>  <strong>注</strong>: 在大容量磁盘系统中，最外层磁道的扇区多于内侧磁道，这种技术被称为<strong>区位记录</strong>，相邻的磁道被统称为区，一个区的扇区数量相同。</li>
+<li>容积 (Capacity): depends on <ul>
+<li>the number of platters and </li>
+<li>the density in which the tracks and sectors are placed.</li>
+</ul>
+</li>
+<li>性能 (Performance): <ul>
+<li><strong>Seek time</strong>：读写头从一个磁道移动到另一个磁道的时间。</li>
+<li><strong>Rotation delay</strong> or <strong>Latency time</strong>：读写头到达磁道之后，等到磁盘旋转到需要到达的扇区的时间。</li>
+<li><strong>Access time</strong>：seek time 和 latency time 之和。</li>
+<li><strong>Transfer rate</strong>：在磁盘上读出或写入数据的速率。</li>
+</ul>
+  <strong>注</strong>：磁盘旋转 (rotate) 的速度影响磁盘存储时间和传输速率。<ul>
+<li>为了支持高速转动，磁盘系统的读写头并不与磁盘接触，而是悬浮在磁盘上。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Optical-Systems"><a href="#Optical-Systems" class="headerlink" title="Optical Systems"></a>Optical Systems</h2><p><strong>Examples</strong>:  compact disk (CD)<br><strong>Construction:</strong><br><img src="/img/index/CS-overview/CD.jpg" alt="CD"></p>
+<ul>
+<li>为了使CD储存能力达到最大，采取统一的线性密度存储在整个螺旋形磁道 (spiraled track)上</li>
+</ul>
+<p><strong>Capacity:</strong> depends on the number of platters and the density in which the tracks and sectors are placed.<br><strong>Performance:</strong> evaluated by 4 factors,</p>
+<h2 id="Flash-Drives"><a href="#Flash-Drives" class="headerlink" title="Flash Drives"></a>Flash Drives</h2><p>TODO</p>
+<h1 id="1-4-Representing-Information-as-Bit-Patterns"><a href="#1-4-Representing-Information-as-Bit-Patterns" class="headerlink" title="1.4 Representing Information as Bit Patterns"></a>1.4 Representing Information as Bit Patterns</h1><h2 id="Representing-Text"><a href="#Representing-Text" class="headerlink" title="Representing Text"></a>Representing Text</h2><p>TODO:</p>
+<h2 id="Representing-Numeric-Values"><a href="#Representing-Numeric-Values" class="headerlink" title="Representing Numeric Values"></a>Representing Numeric Values</h2><p>TODO:</p>
+<h2 id="Representing-Images"><a href="#Representing-Images" class="headerlink" title="Representing Images"></a>Representing Images</h2><p>TODO:</p>
+<h2 id="Representing-Sound"><a href="#Representing-Sound" class="headerlink" title="Representing Sound"></a>Representing Sound</h2><p>TODO:</p>
+<h1 id="1-5-The-Binary-System"><a href="#1-5-The-Binary-System" class="headerlink" title="1.5 The Binary System"></a>1.5 The Binary System</h1><h2 id="Binary-Notation"><a href="#Binary-Notation" class="headerlink" title="Binary Notation"></a>Binary Notation</h2><p>TODO:</p>
+<h2 id="Binary-Addition"><a href="#Binary-Addition" class="headerlink" title="Binary Addition"></a>Binary Addition</h2><p>TODO:</p>
+<h2 id="Fractions-in-Binary"><a href="#Fractions-in-Binary" class="headerlink" title="Fractions in Binary"></a>Fractions in Binary</h2><p>TODO:</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Soh Manyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shonsama">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/" class="post-title-link" itemprop="url">A Simple Guideline to build your own Blog</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-16 17:22:47" itemprop="dateCreated datePublished" datetime="2020-11-16T17:22:47+08:00">2020-11-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-25 16:02:27" itemprop="dateModified" datetime="2020-11-25T16:02:27+08:00">2020-11-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/" itemprop="url" rel="index"><span itemprop="name">勉強力</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to My Blog! This is my very first post. In this post, a simple guideline of using Hexo and fluid to build and beatify your own Blog will be provided. If you have any question, please check the <a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo offical document</a> and <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs">Fluid offical document</a> for more detailed information.</p>
+<h2 id="The-Environment"><a href="#The-Environment" class="headerlink" title="The Environment"></a>The Environment</h2><h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><p>Download Git in the offical website: <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git - Downloading Package</a>.</p>
+<h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><p>Download Node.js in the offical website: <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Download | Node.js</a>.</p>
+<h2 id="Init-Hexo-Project"><a href="#Init-Hexo-Project" class="headerlink" title="Init Hexo Project"></a>Init Hexo Project</h2><h3 id="Install-hexo-cli"><a href="#Install-hexo-cli" class="headerlink" title="Install hexo-cli"></a>Install hexo-cli</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli </span><br></pre></td></tr></table></figure>
+<h3 id="Init-hexo-project"><a href="#Init-hexo-project" class="headerlink" title="Init hexo project"></a>Init hexo project</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog </span><br></pre></td></tr></table></figure>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;Post Name&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><p>Show the website in localhost.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Config-deployment"><a href="#Config-deployment" class="headerlink" title="Config deployment"></a>Config deployment</h3><p>Open the file <code>_config.yml</code> in folder <code>/themes</code> and modify the deploy part as follows:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repo: <span class="string">&#x27;your repository URL&#x27;</span></span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="Save-the-configuration-file"><a href="#Save-the-configuration-file" class="headerlink" title="Save the configuration file"></a>Save the configuration file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="Clean-static-files"><a href="#Clean-static-files" class="headerlink" title="Clean static files"></a>Clean static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="Using-Theme-Fluid"><a href="#Using-Theme-Fluid" class="headerlink" title="Using Theme Fluid"></a>Using Theme Fluid</h2><h3 id="Install-Fluid"><a href="#Install-Fluid" class="headerlink" title="Install Fluid"></a>Install Fluid</h3><p>If your Hexo version &gt;= 5.0.0, you can install Fluid via Npm:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-theme-fluid</span><br></pre></td></tr></table></figure>
+<p>Then create <code>_config.fluid.yml</code> in the blog directory and copy the content of <code>_config.yml</code> in <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">Page</a>.</p>
+<h3 id="Set-theme"><a href="#Set-theme" class="headerlink" title="Set theme"></a>Set theme</h3><p>Edit <code>_config.yml</code> in the blog root directory as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: fluid</span><br></pre></td></tr></table></figure>
+<h3 id="Create-about-page"><a href="#Create-about-page" class="headerlink" title="Create about page"></a>Create about page</h3><p>The about page needs to be created manually:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p>Then edit <code>/source/about/index.md</code> and add <code>layout</code> attribute.<br>The modified example is as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: about</span><br><span class="line">date: 2020-02-23 19:20:33</span><br><span class="line">layout: about</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">About content</span><br></pre></td></tr></table></figure>
+<h3 id="More-configuration"><a href="#More-configuration" class="headerlink" title="More configuration"></a>More configuration</h3><p>For more information, please visit the <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">Offical document</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
 
 
 
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
-    })()
-  </script>
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Soh Manyeong"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Soh Manyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Soh Manyeong</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
 
 
 
@@ -552,10 +752,9 @@ X
 
 
 
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
+  
 
-
+  
 
 </body>
 </html>

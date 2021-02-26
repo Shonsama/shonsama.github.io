@@ -1,247 +1,241 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
-
-
-
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
-  <link rel="icon" type="image/png" href="/img/avatar.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="Soh Manyeong">
-  <meta name="keywords" content="">
-  <title>情报学基础学习-1.Data Storage - Shonsama</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/main.css">
 
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/github-gist.min.css" />
-    
-  
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-  
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+
+  <meta name="description" content="1.1 Bits and Their StorageBits: 0s and 1s Boolean OperationThere are 3 kinds of boolean operations.  AND: A AND B is True, A is True and B is True OR: A OR B is True, At least one of A and B is True X">
+<meta property="og:type" content="article">
+<meta property="og:title" content="情报学基础学习-1.Data Storage">
+<meta property="og:url" content="http://example.com/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/index.html">
+<meta property="og:site_name" content="Shonsama">
+<meta property="og:description" content="1.1 Bits and Their StorageBits: 0s and 1s Boolean OperationThere are 3 kinds of boolean operations.  AND: A AND B is True, A is True and B is True OR: A OR B is True, At least one of A and B is True X">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/index/CS-overview/flip-flop.jpg">
+<meta property="og:image" content="http://example.com/img/index/CS-overview/Hexadecimal.jpg">
+<meta property="og:image" content="http://example.com/img/index/CS-overview/disk.jpg">
+<meta property="og:image" content="http://example.com/img/index/CS-overview/CD.jpg">
+<meta property="article:published_time" content="2020-11-25T07:57:31.000Z">
+<meta property="article:modified_time" content="2020-12-16T03:43:30.191Z">
+<meta property="article:author" content="Soh Manyeong">
+<meta property="article:tag" content="EN">
+<meta property="article:tag" content="CS">
+<meta property="article:tag" content="ZN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/index/CS-overview/flip-flop.jpg">
+
+<link rel="canonical" href="http://example.com/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/">
 
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Shonsama's scrapbox</strong>&nbsp;</a>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+  <title>情报学基础学习-1.Data Storage | Shonsama</title>
+  
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Shonsama</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
 </nav>
 
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/bg/default.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="情报学基础学习-1.Data Storage">
-              
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/25/%E6%83%85%E6%8A%A5%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-1-Data-Storage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Soh Manyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shonsama">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          情报学基础学习-1.Data Storage
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-25 15:57:31" itemprop="dateCreated datePublished" datetime="2020-11-25T15:57:31+08:00">2020-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-16 11:43:30" itemprop="dateModified" datetime="2020-12-16T11:43:30+08:00">2020-12-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/" itemprop="url" rel="index"><span itemprop="name">勉強力</span></a>
+                </span>
             </span>
 
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-25 15:57" pubdate>
-        2020年11月25日 下午
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      1k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      16
-       分钟
-    </span>
-  
-
-  
-  
-</div>
-
-            
-          </div>
-
           
+
         </div>
-      </div>
-    </div>
-  </header>
+      </header>
 
-  <main>
     
-      
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">情报学基础学习-1.Data Storage</h1>
-            
-            <div class="markdown-body">
-              <h1 id="1-1-Bits-and-Their-Storage"><a href="#1-1-Bits-and-Their-Storage" class="headerlink" title="1.1 Bits and Their Storage"></a>1.1 Bits and Their Storage</h1><p><strong>Bits</strong>: 0s and 1s</p>
+      
+        <h1 id="1-1-Bits-and-Their-Storage"><a href="#1-1-Bits-and-Their-Storage" class="headerlink" title="1.1 Bits and Their Storage"></a>1.1 Bits and Their Storage</h1><p><strong>Bits</strong>: 0s and 1s</p>
 <h2 id="Boolean-Operation"><a href="#Boolean-Operation" class="headerlink" title="Boolean Operation"></a>Boolean Operation</h2><p>There are 3 kinds of boolean operations.</p>
 <ul>
 <li>AND: A AND B is True, A is True and B is True</li>
 <li>OR: A OR B is True, At least one of A and B is True</li>
 <li>XOR: A XOR B is True, either A or B but not both</li>
 </ul>
-<h2 id="Gates-and-Flip-Flop"><a href="#Gates-and-Flip-Flop" class="headerlink" title="Gates and Flip-Flop"></a>Gates and Flip-Flop</h2><h3 id="Gates"><a href="#Gates" class="headerlink" title="Gates:"></a>Gates:</h3><p><img src="/img/index/CS-overview/flip-flop.jpg" srcset="/img/loading.gif" alt="Gates"></p>
+<h2 id="Gates-and-Flip-Flop"><a href="#Gates-and-Flip-Flop" class="headerlink" title="Gates and Flip-Flop"></a>Gates and Flip-Flop</h2><h3 id="Gates"><a href="#Gates" class="headerlink" title="Gates:"></a>Gates:</h3><p><img src="/img/index/CS-overview/flip-flop.jpg" alt="Gates"></p>
 <h3 id="Flip-flop"><a href="#Flip-flop" class="headerlink" title="Flip-flop"></a>Flip-flop</h3><p>A device to store a bit, constructed of gates.</p>
 <h2 id="Hexadecimal-Notation-十六进制记数法"><a href="#Hexadecimal-Notation-十六进制记数法" class="headerlink" title="Hexadecimal Notation 十六进制记数法"></a>Hexadecimal Notation 十六进制记数法</h2><p>Stream：A long string of bits (0s and 1s)<br>Hard to read and comprehend. So we need a new shorthand notation to simplify the representation of the string, which is <strong><em>Hexadecimal Notation</em></strong>.</p>
 <ul>
 <li>Takes advantage of the fact that bit patterns within a machine tend to have lengths in multiples of four.</li>
 <li>Represent Table </li>
 </ul>
-<p><img src="/img/index/CS-overview/Hexadecimal.jpg" srcset="/img/loading.gif" alt="Hexadecimal"></p>
+<p><img src="/img/index/CS-overview/Hexadecimal.jpg" alt="Hexadecimal"></p>
 <h1 id="1-2-Main-Memory"><a href="#1-2-Main-Memory" class="headerlink" title="1.2 Main Memory"></a>1.2 Main Memory</h1><p>A computer store a large number collection of <strong><em>circuits</em></strong>(such as flip-flops), each storing a <strong>single bit</strong> .This bit reservoir is known as the machine’s <strong><em>main memory</em></strong>.</p>
 <h2 id="Memory-Organization"><a href="#Memory-Organization" class="headerlink" title="Memory Organization"></a>Memory Organization</h2><h3 id="Cells"><a href="#Cells" class="headerlink" title="Cells"></a>Cells</h3><p>Main memory is organized in manageable units called cells. A typical cell size being <strong>eight bits</strong> which is one <strong>byte</strong>.</p>
 <ul>
@@ -266,7 +260,7 @@
 <li><strong>Cons</strong>: require mechanical motion and therefore require significantly more time to store and retrieve data than a machine’s main memory. Storage systems with moving parts are more prone to mechanical failures than solid state systems.</li>
 </ul>
 <h2 id="Magnetic-Systems"><a href="#Magnetic-Systems" class="headerlink" title="Magnetic Systems"></a>Magnetic Systems</h2><p><strong>Examples</strong>: magnetic disk, hard disk drive (HDD)</p>
-<h3 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h3><p><img src="/img/index/CS-overview/disk.jpg" srcset="/img/loading.gif" alt="Magnetic Disk"></p>
+<h3 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h3><p><img src="/img/index/CS-overview/disk.jpg" alt="Magnetic Disk"></p>
 <ul>
 <li>磁道 (track): 磁盘内部由无数圆圈构成，,这一圈圈圆圈被称为<strong>磁道</strong>。</li>
 <li>柱面 (cylinder): 一个磁盘存储系统由若干个磁盘构成，安排在同一根轴上，在这种情况下所有读写头一起移动，每当读写头重定位时，都可以访问一组新的磁道，这组<strong>磁道</strong>被称为<strong>柱面</strong>。<br>  <strong>注</strong>: 在磁盘存储过程当中要注意尽量减少读写头重定位的次数。</li>
@@ -287,7 +281,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Optical-Systems"><a href="#Optical-Systems" class="headerlink" title="Optical Systems"></a>Optical Systems</h2><p><strong>Examples</strong>:  compact disk (CD)<br><strong>Construction:</strong><br><img src="/img/index/CS-overview/CD.jpg" srcset="/img/loading.gif" alt="CD"></p>
+<h2 id="Optical-Systems"><a href="#Optical-Systems" class="headerlink" title="Optical Systems"></a>Optical Systems</h2><p><strong>Examples</strong>:  compact disk (CD)<br><strong>Construction:</strong><br><img src="/img/index/CS-overview/CD.jpg" alt="CD"></p>
 <ul>
 <li>为了使CD储存能力达到最大，采取统一的线性密度存储在整个螺旋形磁道 (spiraled track)上</li>
 </ul>
@@ -301,211 +295,187 @@
 <h2 id="Binary-Addition"><a href="#Binary-Addition" class="headerlink" title="Binary Addition"></a>Binary Addition</h2><p>TODO:</p>
 <h2 id="Fractions-in-Binary"><a href="#Fractions-in-Binary" class="headerlink" title="Fractions in Binary"></a>Fractions in Binary</h2><p>TODO:</p>
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E5%8B%89%E5%BC%B7%E5%8A%9B/">勉強力</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
-                    
-                      <a class="hover-with-bg" href="/tags/CS/">CS</a>
-                    
-                      <a class="hover-with-bg" href="/tags/ZN/">ZN</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
-              
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2021/01/14/TOFEL-Speaking/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">TOFEL Speaking</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/">
-                        <span class="hidden-mobile">A Simple Guideline to build your own Blog</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-              <!-- Comments -->
-              <article class="comments" id="comments">
-                
-                
-
-              </article>
-            
-          </article>
-        </div>
-      </div>
     </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
 
     
-
     
-      <a id="scroll-top-button" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
     
 
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/EN/" rel="tag"># EN</a>
+              <a href="/tags/CS/" rel="tag"># CS</a>
+              <a href="/tags/ZN/" rel="tag"># ZN</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/16/A%20Simple%20Guideline%20to%20build%20your%20own%20Blog/" rel="prev" title="A Simple Guideline to build your own Blog">
+      <i class="fa fa-chevron-left"></i> A Simple Guideline to build your own Blog
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/01/14/TOFEL-Speaking/" rel="next" title="TOFEL Speaking">
+      TOFEL Speaking <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-  </div>
-</div>
+      </footer>
     
-
-    
-  </main>
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <i class="iconfont icon-love"></i> Powered by <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
+  </article>
   
-
   
-
-  
-</footer>
-
-<!-- SCRIPTS -->
-
-  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
-    NProgress.start()
-    document.addEventListener('DOMContentLoaded', function() {
-      window.NProgress && window.NProgress.inc();
-    })
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
   
 
 
 
-  
+          </div>
+          
 
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.12.0/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.3.0/anchor.min.js" ></script>
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-      typing(title)
-      
-    })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
-    })()
-  </script>
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-Bits-and-Their-Storage"><span class="nav-number">1.</span> <span class="nav-text">1.1 Bits and Their Storage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean-Operation"><span class="nav-number">1.1.</span> <span class="nav-text">Boolean Operation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gates-and-Flip-Flop"><span class="nav-number">1.2.</span> <span class="nav-text">Gates and Flip-Flop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gates"><span class="nav-number">1.2.1.</span> <span class="nav-text">Gates:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flip-flop"><span class="nav-number">1.2.2.</span> <span class="nav-text">Flip-flop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexadecimal-Notation-%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%AE%B0%E6%95%B0%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">Hexadecimal Notation 十六进制记数法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-Main-Memory"><span class="nav-number">2.</span> <span class="nav-text">1.2 Main Memory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-Organization"><span class="nav-number">2.1.</span> <span class="nav-text">Memory Organization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cells"><span class="nav-number">2.1.1.</span> <span class="nav-text">Cells</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Address"><span class="nav-number">2.1.2.</span> <span class="nav-text">Address</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RAM-Random-Access-Memory"><span class="nav-number">2.1.3.</span> <span class="nav-text">RAM (Random Access Memory)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Measuring-Memory-Capacity"><span class="nav-number">2.2.</span> <span class="nav-text">Measuring Memory Capacity</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-3-Mass-Memory"><span class="nav-number">3.</span> <span class="nav-text">1.3 Mass Memory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Magnetic-Systems"><span class="nav-number">3.1.</span> <span class="nav-text">Magnetic Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-it-works"><span class="nav-number">3.1.1.</span> <span class="nav-text">How it works</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optical-Systems"><span class="nav-number">3.2.</span> <span class="nav-text">Optical Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flash-Drives"><span class="nav-number">3.3.</span> <span class="nav-text">Flash Drives</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-4-Representing-Information-as-Bit-Patterns"><span class="nav-number">4.</span> <span class="nav-text">1.4 Representing Information as Bit Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-Text"><span class="nav-number">4.1.</span> <span class="nav-text">Representing Text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-Numeric-Values"><span class="nav-number">4.2.</span> <span class="nav-text">Representing Numeric Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-Images"><span class="nav-number">4.3.</span> <span class="nav-text">Representing Images</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-Sound"><span class="nav-number">4.4.</span> <span class="nav-text">Representing Sound</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-5-The-Binary-System"><span class="nav-number">5.</span> <span class="nav-text">1.5 The Binary System</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-Notation"><span class="nav-number">5.1.</span> <span class="nav-text">Binary Notation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-Addition"><span class="nav-number">5.2.</span> <span class="nav-text">Binary Addition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fractions-in-Binary"><span class="nav-number">5.3.</span> <span class="nav-text">Fractions in Binary</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Soh Manyeong"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Soh Manyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Soh Manyeong</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
 
 
 
@@ -521,10 +491,9 @@
 
 
 
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
+  
 
-
+  
 
 </body>
 </html>
